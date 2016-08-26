@@ -1,0 +1,1 @@
+<div class="intro">{{$title->config_quotation}}</div>
