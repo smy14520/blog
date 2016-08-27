@@ -19,7 +19,7 @@ class BlogController extends Controller
             $arr[]=$v['cate_id'];
         }
 
-        $pos=Posts::join('category','posts.icon_id','=','category.cate_id')->whereIn('icon_id',$arr)->paginate(10);
+        $pos=Posts::join('category','posts.icon_id','=','category.cate_id')->whereIn('icon_id',$arr)->select('posts.*','icon')->orderBy('posts.created_at','desc')->paginate(10);
 
 
 //        $pos=Posts::whereIn('icon_id',$arr);
