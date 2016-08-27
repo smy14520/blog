@@ -41,6 +41,7 @@ class BlogController extends Controller
 //        });
 
         //return view('home.blog',compact('about',$cate))->with('post',$pos);
+        dd($pos);
         return view('home.blog')->with('about',$cate)->with('post',$pos);
          // $canum=Category::familytree(Category::all(),$cate);
 
