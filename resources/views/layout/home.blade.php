@@ -98,7 +98,7 @@
                 <h3 class="line">Categories</h3>
                 <ul class="cat-list">
                     @foreach($cateall as $v)
-                    <li><a href="#">{{$v->cate_name.'/'.$v->cate_id}} ({{$v->count}})</a></li>
+                    <li><a href="{{url('/blog/'.$v->cate_name.'/'.$v->cate_id)}}">{{$v->cate_name}} ({{$v->count}})</a></li>
                      @endforeach
                 </ul>
             </div>
